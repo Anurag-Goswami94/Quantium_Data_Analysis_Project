@@ -1,0 +1,78 @@
+                                      
+                                                                  >>>>>>>>>>>>>>>>>>>>> TASK-2 of Quantium <<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+  ##  Background information on your task.
+
+
+ 1> The Category Manager for Chips, has asked us to test the impact of the new trial layouts with a data driven recommendation to whether or not the trial layout 
+    should be rolled out to all their stores.
+
+ 2> This part of the project we will be examining the performance in trial vs control stores to provide a recommendation for each location based on our insight.
+    If you discover any other interesting insights feel free to include them in your findings.
+
+ 3> Select control stores – explore the data and define metrics for your control store selection – think about what would make them a control store. Look at the drivers 
+    and make sure you visualise these in a graph to better determine if they are suited. For this piece it may even be worth creating a function to help you. 
+
+ 4> Assessment of the trial – this one should give you some interesting insights into each of the stores, check each trial store individually in comparison with the 
+    control store to get a clear view of its overall performance. We want to know if the trial stores were successful or not.
+
+ 5> Summarise your findings for each store and provide an recommendation that we can share with Julia outlining the impact on sales during the trial period.
+
+ 6> 
+
+
+
+  ## Here is your task.
+
+
+  1> Julia has asked us to evaluate the performance of a store trial which was performed in stores 77, 86 and 88.  
+
+  -2> To get started, use the QVI_data dataset below or your output from Task-1 and consider the monthly sales experience of each store:-
+
+                             -> Total sales revenue 
+
+                             -> Total number of customers
+
+                             -> Average number of transactions per customer
+
+  3> Create a measure to compare different control stores to each of the trial stores. To do this write a function to reduce having to re-do the analysis for each 
+     trial store. Consider using Pearson correlations or a metric such as a magnitude distance. E.G:- 
+
+            (Observed distance – minimum distance) / (Maximum distance – minimum distance) as a measure.
+
+  4> Once you have selected your control stores, compare each trial and control pair during the trial period. You want to TEST if total sales are significantly different 
+     in the trial period, and if so, check if the driver of change is more purchasing customers or more purchases per customers etc.
+
+  5> 
+
+
+  ## From vedio:
+
+  1> The trail period was from the start of February 2019 to the end of APril 2019 
+
+  2> When looking for a control store we need to look at the stores that has similar performance to the trial store. Let's consider the Monthly Overall Sales Revenue,
+     MOnthly number of customers, and Monthly number of Transaction per customer. So be sure to create the metrix at a montly store level. 
+         Make sure to only consider stores that have sales every month over July 2018 to June 2019. 
+
+  3> Will then need to rank how similar each potential control store is to the trial store. We can do this by working out either how correlated the store performance are,
+     or a combination metric that considers how different each potential control store is to the trial store every month. 
+
+  4> Once your have selected the control stores for each of the trial stores, assess the impact of the trial on sales. We will need to check if the trial stores have 
+     significantly different results to the control stores. Consider if you can visualize this through graphs.
+
+
+
+
+____________________________________________________________
+
+MY Thinking :-
+
+# Pearson:
+
+ > If we run a FOR LOOP of i on merge_dfs_2['STORE_NUMBER"] and turn that 'i' into dataframes to get the unique stores data and compare those dataframes
+with the TRIAL DATA FRAMES for correlation. .
+
+ > Create matrix for the Monthly Overall Sales Revenue, MOnthly number of customers, and Monthly number of Transaction per customer for checking CORRELATION.
+
+
+ 
