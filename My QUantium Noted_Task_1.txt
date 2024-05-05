@@ -1,0 +1,126 @@
+
+                                                       **<<<<<<<<<<<<<<<<<<<  TASK-1 >>>>>>>>>>>>>>>>>>>>>**
+
+  
+ GITHUB MAIN SITE= https://github.com/annamnliang/Forage-QVI
+
+                                        
+                                                      }}}  }}}  }}}  TASK 1  {{{  {{{  {{{
+
+
+1> The Category Manager for Chips, wants to better understand the types of customers who purchase Chips and their purchasing behaviour within the region.
+
+2> Main Tasks of TASK 1:-
+
+  -# Examine transaction data– Look for inconsistencies, missing data across the data set, outliers, correctly identified category items,numeric data across all tables. 
+    If you determine any anomalies make the necessary changes in the dataset & save it. Having clean data will help when it comes to your analysis. 
+
+  -# Examine customer data– Check for similar issues in the customer data, look for nulls and when you are happy merge the transaction and customer data together
+    so it’s ready for the analysis ensuring you save your files along the way.
+
+  -# Data analysis and customer segments– In your analysis make sure you define the metrics– look at total sales, drivers of sales, where the highest sales are coming from
+    etc. Explore the data, create charts and graphs as well as noting any interesting trends and/or insights you find. These will all form part of our report to Julia. 
+
+  -# Deep dive into customer segments – Define your recommendation from your insights, determine which segments we should be targeting, if packet sizes are relative
+    and form an overall conclusion based on your analysis. 
+
+  -# Make sure you save your analysis in the CSV files and your visualisations – we will need them for our report. If you could work on this analysis and send me your 
+    initial findings by end of next week that would be great. 
+
+3> Here is your task :-
+
+  #  We need to analyse the data to understand the current purchasing trends and behaviours.
+
+  -# The client is particularly interested in customer segments and their chip purchasing behaviour.
+
+  -# You will also want to derive extra features such as pack size and brand name from the data and define metrics of interest to enable you to draw insights on who spends
+    on chips and what drives spends for each customer segment. 
+
+  # Remember, our end goal is to form a strategy based on the findings to provide a clear recommendation to Julia the Category Manager so make sure your insights can 
+    have a commercial application.
+
+
+<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
+
+
+
+3> Things I will perform:-
+
+                                     $$$ TRANSACTION DATA SET $$$
+  
+   -> Transaction Columns Names-  Date, Store_Number, Loyalty_Card_Number, Transcation ID, Product Number, Product Name, Product Quantity, Total Sales.
+  
+   -> Transaction  Date Column: - Convert the Trasaction Date from "Julian date format" to Normal Date FOrmat. link:-  https://pandas.pydata.org/pandas-docs/version/0.20/generated/pandas.to_datetime.html
+
+   -> Transaction Product Name:- Remove 2 spaces to 1 space or apply "-" in between. 
+
+ Couldn't do  > Check out the Total Sale of 1 chip from different companies in the Transaction data set. To check out the common price of a single chip check out the rate of 1 chip in most stores
+
+                        The CHIPS PRICE HAVING ERROR IS :-  Dorito Corn Chp     Supreme 380g. < TOTAL OF 1 CHIP is :- 3.25 and 6.5>
+                                         Here, we took $6.5 as the rate of 1 Dorito Corn Chp     Supreme 380g, because 
+                                        {Total no. of $3.25 chips is = 89 pecies
+                                         Total no. of $6.5 chips is = 203 pecies} 
+  
+   > 
+
+
+                                      $$$ Purchase DATA SET $$$   
+
+   -> Purchase Columns Names-  Loyalty_Card Number, Lifestage, Premium Customer.
+
+   -> MErge the Purchase and the Transcation Data set.   
+
+
+
+
+                                         $$$ As per Answer Documents $$$
+
+  > Look at the number of transaction lines over time to see if there are any obvious data issues such as missing data. (page-5)
+
+  -> Count the number of transactions by date.  Create a summary of transaction count by date (page-5)
+
+  > Create a sequence of dates from 1 Jul 2018 to 30 Jun 2019 and use this to create a chart of number of transactions over time to find the missing date
+
+  -> Check when there was an increase of purchase. Query the month further.
+
+  >>  Statistical Data analysis on customer segments :
+
+               -# Who spends the most on chips (total sales), describing customers by lifestage and how premium their general purchasing behaviour is. 
+               -# How many customers are in each segment.
+               -# How many chips are bought per customer by segment.
+               -# What's the average chip price by customer segment.
+               -# Investigate the average price per unit chips bought for each customer segment as this is also a driver of total sales.
+               -# Perform an independent t-test between mainstream vs premium and budget midage and young singles and couples. The unit price for mainstream,
+                 young and mid-age singles and couples [ARE / ARE NOT] significantly higher than that of budget or premium, young and midage singles and couples.
+
+
+
+
+<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
+
+4> Things I have done till now:-
+
+  - Took out a separtate Data of the price of 1 chip in a different excel sheet. THis will help me to track which chip has a different price tag for 1 packet of chip.
+    and find out the common price for a the chips with different price tag.
+
+  - Converted Trasaction Date from "Julian date format" to "Normal Date Format". 
+
+  - Corrected the Product Names.
+
+  - Found the outlier "200" and DELETED the ROW.
+
+  - Add 2 columns by the name 'PACKAGE_SIZE' and "ITEMS_TYPE" and filled the columns with DATA from PRODUCT_NAME section.
+
+  - Merged PURCHASE and TRANSCATION DATA-SET. 
+ 
+  - 
+
+
+<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
+
+
+JUST NOTING>
+
+ # IF P-Value (python stats scypy) is less than 0.05(SI) we reject the NULL HYPO and If the P-Value is higher that 0.05(SI) we accept the NULL HYPO
+
+saving link > https://www.datacamp.com/tutorial/an-introduction-to-python-t-tests
